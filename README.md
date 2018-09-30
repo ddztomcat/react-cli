@@ -1,4 +1,5 @@
-# react-cli
+# react-cli ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+
 参考vue-cli 的 init 功能，初始化 react 项目
 ### 用法
 ```bash

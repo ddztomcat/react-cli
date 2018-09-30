@@ -1,6 +1,6 @@
 {
   "name": "react-cli-ddz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react cli",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "ssr"
   ],
   "author": "ddz",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ddztomcat/react-cli/issues"
   },
