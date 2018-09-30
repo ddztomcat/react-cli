@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+const program = require("commander");
+const download = require('download-git-repo')
+const fs = require("fs");
+const rm = require("rimraf");
+
+const ora = require("ora");
+const inquirer = require("inquirer");
+
+program.usage("[project-name]");
+
+program.parse(process.argv);
+
+const file = program.args[0];
+
+if (fs.existsSync(file)) {
+  const files = fs.readdirSync(file);
+
+  if (files.length !== 0) {
+    console.log("初始化失败：", file + "不是空文件夹");
+    return;
+  }
+}
+
+const spinner = ora(
+  "git cloning react-starter-template \n https://github.com/ddztomcat/react-starter-template"
+);
+spinner.start();
+const url = "ddztomcat/react-starter-template";
+download(
+  url,
+  file,
+  function(err) {
+    if (err) {
+      spinner.fail(err.toString());
+    } else {
+      spinner.succeed(` ${file} 初始化成功`);
+    }
+  
+    rm.sync(file + "/.git");
+    spinner.stop();
+  }
+);
