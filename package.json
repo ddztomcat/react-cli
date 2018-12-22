@@ -1,6 +1,6 @@
 {
   "name": "react-cli-ddz",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react cli",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "react-cli": "bin/react"
+    "react-cli-ddz": "bin/react"
   },
   "repository": {
     "type": "git",
