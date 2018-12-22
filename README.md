@@ -5,11 +5,11 @@
 ```bash
 # 全局安装
 
-$ npm i -g react-cli
+$ npm i -g react-cli-ddz
 
 # 初始化项目
 
-$ react-cli init `project-name`
+$ react-cli-ddz init `project-name`
 
 ```
 
